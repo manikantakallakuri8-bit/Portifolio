@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Manikanta Kallakuri | Full-Stack Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"
+<link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-logo">MK.</div>
   <ul class="nav-links">
@@ -20,8 +21,23 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="mailto:manikantakallakuri143@gmail.com" class="nav-cta">Hire Me</a>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleNav(this)">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<!-- Mobile drawer -->
+<div class="nav-mobile-drawer" id="mobileNav">
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#skills" onclick="closeNav()">Skills</a>
+  <a href="#experience" onclick="closeNav()">Experience</a>
+  <a href="#projects" onclick="closeNav()">Projects</a>
+  <a href="#education" onclick="closeNav()">Education</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+  <a href="mailto:manikantakallakuri143@gmail.com" style="color:var(--primary);font-weight:600;">Hire Me</a>
+</div>
+
+<!-- DEV -->
 <section id="dev">
   <div class="dev-bg-pattern"></div>
   <div class="dev-content">
@@ -29,52 +45,48 @@
     <h1>Manikanta <span class="highlight">Kallakuri</span></h1>
     <p class="dev-sub">Full-stack developer with 2 years of professional experience building web and mobile applications. Specialised in Angular, React, Python APIs, and Generative AI integrations. Based in England, UK.</p>
     <div class="dev-buttons">
-      <a href="#projects" class="btn-primary">See my projects -></a>
+      <a href="#projects" class="btn-primary">See my projects &rarr;</a>
       <a href="#contact" class="btn-outline">Get in touch</a>
     </div>
     <div class="dev-stats">
       <div class="stat-item"><div class="stat-number">2</div><div class="stat-label">years experience</div></div>
       <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">major projects</div></div>
-      <div class="stat-item"><div class="stat-number">MSc</div><div class="stat-label">Distinction - Leicester</div></div>
+      <div class="stat-item"><div class="stat-number">MSc</div><div class="stat-label">Distinction &mdash; Leicester</div></div>
     </div>
   </div>
 </section>
 
-<section id="genai-strip" style="padding: 2.5rem 5%; background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-  <div class="fade-up" style="max-width: 1100px; margin: 0 auto;">
-    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.4rem;">
-      <span style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary-light); background: rgba(18,185,129,0.12); padding: 0.25rem 0.8rem; border-radius: 2rem;">Generative AI experience</span>
-    </div>
-    <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 1.2rem;">
- 
-      <div style="background: rgba(18,185,129,0.05); border: 1px solid var(--border-glow); border-radius: 1.2rem; padding: 1.4rem 1.6rem;">
-        <div style="font-size: 0.72rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem;">What I built</div>
-        <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem;">GPT-4 powered writing assistant</div>
-        <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Designed context-aware prompt templates for each dissertation section - literature review, methodology, discussion - and connected them to a real-time WebSocket API for live suggestions.</div>
+<!-- GENAI STRIP -->
+<section id="genai-strip">
+  <div class="genai-inner fade-up">
+    <div class="genai-label">Generative AI experience</div>
+    <div class="genai-grid">
+      <div class="genai-card featured">
+        <div class="genai-card-label">What I built</div>
+        <div class="genai-card-title">GPT-4 powered writing assistant</div>
+        <div class="genai-card-desc">Designed context-aware prompt templates for each dissertation section — literature review, methodology, discussion — and connected them to a real-time WebSocket API for live suggestions.</div>
       </div>
- 
-      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: 1.2rem; padding: 1.4rem 1.6rem;">
-        <div style="font-size: 0.72rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem;">Prompt engineering</div>
-        <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem;">Beyond just calling an API</div>
-        <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Built an adaptive prompting engine that adjusts tone, style, and structure based on discipline and section type. Handled streaming responses, JSON parsing, and fallback logic in production.</div>
+      <div class="genai-card plain">
+        <div class="genai-card-label">Prompt engineering</div>
+        <div class="genai-card-title">Beyond just calling an API</div>
+        <div class="genai-card-desc">Built an adaptive prompting engine that adjusts tone, style, and structure based on discipline and section type. Handled streaming responses, JSON parsing, and fallback logic in production.</div>
       </div>
- 
-      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: 1.2rem; padding: 1.4rem 1.6rem;">
-        <div style="font-size: 0.72rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem;">Skills gained</div>
-        <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.7rem;">Production AI development</div>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-          <span style="background: rgba(18,185,129,0.1); border: 0.5px solid var(--border-subtle); border-radius: 2rem; padding: 0.2rem 0.7rem; font-size: 0.7rem; color: var(--text-muted);">GPT-4 API</span>
-          <span style="background: rgba(18,185,129,0.1); border: 0.5px solid var(--border-subtle); border-radius: 2rem; padding: 0.2rem 0.7rem; font-size: 0.7rem; color: var(--text-muted);">Prompt Engineering</span>
-          <span style="background: rgba(18,185,129,0.1); border: 0.5px solid var(--border-subtle); border-radius: 2rem; padding: 0.2rem 0.7rem; font-size: 0.7rem; color: var(--text-muted);">Streaming responses</span>
-          <span style="background: rgba(18,185,129,0.1); border: 0.5px solid var(--border-subtle); border-radius: 2rem; padding: 0.2rem 0.7rem; font-size: 0.7rem; color: var(--text-muted);">WebSocket + LLM</span>
-          <span style="background: rgba(18,185,129,0.1); border: 0.5px solid var(--border-subtle); border-radius: 2rem; padding: 0.2rem 0.7rem; font-size: 0.7rem; color: var(--text-muted);">Context injection</span>
+      <div class="genai-card plain">
+        <div class="genai-card-label">Skills gained</div>
+        <div class="genai-card-title">Production AI development</div>
+        <div class="genai-tags">
+          <span class="genai-tag">GPT-4 API</span>
+          <span class="genai-tag">Prompt Engineering</span>
+          <span class="genai-tag">Streaming responses</span>
+          <span class="genai-tag">WebSocket + LLM</span>
+          <span class="genai-tag">Context injection</span>
         </div>
       </div>
- 
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="section-header fade-up">
     <span class="section-tag">About me</span>
@@ -84,18 +96,18 @@
   <div class="about-grid fade-up">
     <div class="about-text">
       <p>I'm Mani, a full-stack developer with over two years of hands-on experience at Integra Solutions, where I worked across Angular, Ionic, Python (Django and FastAPI), and MongoDB to deliver web and hybrid mobile applications.</p>
-      <p>After completing my MSc in Advanced Computer Science with a Distinction at the University of Leicester, I've been focused on combining solid engineering fundamentals with practical Generative AI - building tools that use GPT, prompt engineering, and real-time APIs to genuinely improve how people work.</p>
+      <p>After completing my MSc in Advanced Computer Science with a Distinction at the University of Leicester, I've been focused on combining solid engineering fundamentals with practical Generative AI — building tools that use GPT, prompt engineering, and real-time APIs to genuinely improve how people work.</p>
       <p>I'm comfortable across the full stack, confident in agile teams, and have experience mentoring junior developers. I'm now looking for a full-stack or frontend engineering role in the UK where I can contribute from day one.</p>
     </div>
     <div class="highlight-cards">
       <div class="highlight-item">
         <div class="highlight-emoji">🎓</div>
-        <div class="highlight-title">MSc Advanced Computer Science - Distinction</div>
-        <div class="highlight-desc">University of Leicester, UK (2023-2025). Dissertation project: AI-powered dissertation writing assistant.</div>
+        <div class="highlight-title">MSc Advanced Computer Science — Distinction</div>
+        <div class="highlight-desc">University of Leicester, UK (2023–2025). Dissertation project: AI-powered dissertation writing assistant.</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-emoji">🏆</div>
-        <div class="highlight-title">IEEE Hackathon - 3rd Place</div>
+        <div class="highlight-title">IEEE Hackathon — 3rd Place</div>
         <div class="highlight-desc">Ranked 1st in algorithmic challenges as part of a 2-member team. Built optimised Python solutions under time pressure.</div>
       </div>
       <div class="highlight-item">
@@ -107,6 +119,7 @@
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-header fade-up">
     <span class="section-tag">Tech stack</span>
@@ -180,6 +193,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header fade-up">
     <span class="section-tag">Experience</span>
@@ -190,10 +204,10 @@
       <div class="exp-header">
         <div>
           <span class="exp-role">Software Engineer</span>
-          &nbsp;-&nbsp;
+          &nbsp;&mdash;&nbsp;
           <span class="exp-company">Integra Solutions</span>
         </div>
-        <div class="exp-date">Aug 2021 - Jul 2023</div>
+        <div class="exp-date">Aug 2021 &ndash; Jul 2023</div>
       </div>
       <ul class="exp-bullet">
         <li>Built and maintained scalable web and hybrid mobile applications using Angular, Ionic (Capacitor/Cordova), Django, FastAPI, and MongoDB across multiple client projects.</li>
@@ -207,6 +221,7 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-header fade-up">
     <span class="section-tag">Projects</span>
@@ -215,7 +230,7 @@
   </div>
   <div class="projects-grid fade-up">
     <div class="project-card">
-      <div class="project-cat">GenAI - Full Stack</div>
+      <div class="project-cat">GenAI &mdash; Full Stack</div>
       <div class="project-title">Dissertation Writing Assistant</div>
       <div class="project-desc">AI-powered academic writing platform built for my MSc dissertation. Uses GPT with context-aware prompt templates tailored to each dissertation section. Features real-time WebSocket suggestions, Google Scholar integration, role-based access for students and professors, and document export to Word and PDF.</div>
       <div class="project-techs">
@@ -229,8 +244,8 @@
       </div>
     </div>
     <div class="project-card">
-      <div class="project-cat">Health Tech - Frontend</div>
-      <div class="project-title">WellCourse - Remote Patient Monitoring</div>
+      <div class="project-cat">Health Tech &mdash; Frontend</div>
+      <div class="project-title">WellCourse &mdash; Remote Patient Monitoring</div>
       <div class="project-desc">Production remote patient monitoring platform where I was the sole frontend engineer. Built longitudinal health dashboards (daily, weekly, monthly, yearly views), integrated Apple HealthKit for passive data sync, and implemented Azure AD authentication for clinical teams.</div>
       <div class="project-techs">
         <span class="tech-tag">Angular</span>
@@ -242,8 +257,8 @@
       </div>
     </div>
     <div class="project-card">
-      <div class="project-cat">Fintech - Full Stack</div>
-      <div class="project-title">SunriseBilling - Enterprise Subservicing Platform</div>
+      <div class="project-cat">Fintech &mdash; Full Stack</div>
+      <div class="project-title">SunriseBilling &mdash; Enterprise Subservicing Platform</div>
       <div class="project-desc">Mission-critical billing platform processing high-volume loan-level financial data. Built Django and PostgreSQL backend modules with automated Trial Balance generation, dynamic pricing logic, and REST API integration with accounting and general ledger systems.</div>
       <div class="project-techs">
         <span class="tech-tag">Angular</span>
@@ -256,6 +271,7 @@
   </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
   <div class="section-header fade-up">
     <span class="section-tag">Education and certifications</span>
@@ -265,23 +281,24 @@
     <div class="edu-item">
       <div class="edu-degree">MSc Advanced Computer Science</div>
       <div class="edu-school">University of Leicester, UK</div>
-      <div class="edu-year">Sep 2023 - Jan 2025</div>
+      <div class="edu-year">Sep 2023 &ndash; Jan 2025</div>
       <div class="edu-badge">Distinction</div>
     </div>
     <div class="edu-item">
       <div class="edu-degree">Bachelor of Technology</div>
       <div class="edu-school">Sasi Institute of Technology and Engineering</div>
-      <div class="edu-year">Sep 2017 - Sep 2021</div>
+      <div class="edu-year">Sep 2017 &ndash; Sep 2021</div>
     </div>
   </div>
   <div class="cert-list fade-up">
-    <span class="cert-chip">Angular - The Complete Guide (Udemy)</span>
-    <span class="cert-chip">ChatGPT and Generative AI - The Complete Guide (Udemy)</span>
-    <span class="cert-chip">React - The Complete Guide (Udemy)</span>
+    <span class="cert-chip">Angular &mdash; The Complete Guide (Udemy)</span>
+    <span class="cert-chip">ChatGPT and Generative AI &mdash; The Complete Guide (Udemy)</span>
+    <span class="cert-chip">React &mdash; The Complete Guide (Udemy)</span>
     <span class="cert-chip">Data Structures and Algorithms (Udemy)</span>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="section-header fade-up">
     <span class="section-tag">Contact</span>
@@ -309,16 +326,35 @@
 </section>
 
 <footer>
-  <p>2026 Manikanta Kallakuri - Full-Stack Developer - England, UK</p>
+  <p>&copy; 2026 Manikanta Kallakuri &mdash; Full-Stack Developer &mdash; England, UK</p>
 </footer>
 
 <script>
+  // Intersection observer for fade-ups
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+  }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Mobile nav
+  function toggleNav(btn) {
+    btn.classList.toggle('open');
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function closeNav() {
+    document.querySelector('.nav-hamburger').classList.remove('open');
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+  // Close drawer on outside click
+  document.addEventListener('click', (e) => {
+    const drawer = document.getElementById('mobileNav');
+    const btn = document.querySelector('.nav-hamburger');
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+      closeNav();
+    }
+  });
 </script>
 </body>
 </html>
