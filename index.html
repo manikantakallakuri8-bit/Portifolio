@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Manikanta Kallakuri | Python Engineer & AI Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MK.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:manikantakallakuri143@gmail.com" class="nav-cta">Hire Me</a>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleNav(this)">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-mobile-drawer" id="mobileNav">
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#skills" onclick="closeNav()">Skills</a>
+  <a href="#experience" onclick="closeNav()">Experience</a>
+  <a href="#projects" onclick="closeNav()">Projects</a>
+  <a href="#education" onclick="closeNav()">Education</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+  <a href="mailto:manikantakallakuri143@gmail.com" style="color:var(--primary);font-weight:600;">Hire Me</a>
+</div>
+
+<!-- HERO -->
+<section id="dev">
+  <div class="dev-bg-pattern"></div>
+  <div class="dev-content">
+    <div class="dev-greeting">Open to sponsored roles in the UK - PSW visa until Dec 2026</div>
+    <h1>Manikanta <span class="highlight">Kallakuri</span></h1>
+    <p class="dev-sub">AI-enabled full-stack Python engineer. I build backend APIs, production RAG pipelines, and ReAct AI agents. 2 years commercial experience. MSc CS with Distinction from the University of Leicester.</p>
+    <div class="dev-buttons">
+      <a href="#projects" class="btn-primary">See my work -></a>
+      <a href="#contact" class="btn-outline">Get in touch</a>
+    </div>
+    <div class="dev-stats">
+      <div class="stat-item"><div class="stat-number">2+</div><div class="stat-label">years commercial exp</div></div>
+      <div class="stat-item"><div class="stat-number">4</div><div class="stat-label">production projects</div></div>
+      <div class="stat-item"><div class="stat-number">3s</div><div class="stat-label">RAG query vs 12 min manual</div></div>
+      <div class="stat-item"><div class="stat-number">MSc</div><div class="stat-label">Distinction - Leicester</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GENAI STRIP -->
+<section id="genai-strip">
+  <div class="genai-inner fade-up">
+    <div class="genai-label">Production AI engineering</div>
+
+    <div class="genai-grid">
+      <div class="genai-card featured">
+        <div class="genai-card-label">ReAct AI agent</div>
+        <div class="genai-card-title">Multi-tool agent over 141,000-row Home Office dataset</div>
+        <div class="genai-card-desc">Built a LangChain ReAct agent with two tools - ChromaDB semantic retrieval and live DuckDuckGo web search - enabling multi-step reasoning over the UK sponsor register. Returns structured JSON with full reasoning trace in under 2 seconds.</div>
+        <div class="genai-tags">
+          <span class="genai-tag">LangChain</span>
+          <span class="genai-tag">ReAct agent</span>
+          <span class="genai-tag">Tool orchestration</span>
+          <span class="genai-tag">Groq Llama 3.1</span>
+        </div>
+      </div>
+      <div class="genai-card plain">
+        <div class="genai-card-label">RAG pipeline</div>
+        <div class="genai-card-title">Three-layer retrieval over real-world messy data</div>
+        <div class="genai-card-desc">Query normalisation -> ChromaDB semantic search -> RapidFuzz fuzzy matching. Resolved real retrieval failures from whitespace, symbols, and abbreviations across 141,000 company names. Lookup time: 12 minutes -> under 3 seconds.</div>
+        <div class="genai-tags">
+          <span class="genai-tag">ChromaDB</span>
+          <span class="genai-tag">sentence-transformers</span>
+          <span class="genai-tag">RapidFuzz</span>
+          <span class="genai-tag">Vector search</span>
+        </div>
+      </div>
+      <div class="genai-card plain">
+        <div class="genai-card-label">LLM integration</div>
+        <div class="genai-card-title">GPT API adaptive prompting engine</div>
+        <div class="genai-card-desc">Built context-aware prompt templates per dissertation section - literature review, methodology, discussion - with adaptive tone and style adjustment per discipline. Handled JSON parsing, fallback logic, and output validation in production.</div>
+        <div class="genai-tags">
+          <span class="genai-tag">GPT API</span>
+          <span class="genai-tag">Prompt engineering</span>
+          <span class="genai-tag">Output validation</span>
+          <span class="genai-tag">FastAPI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header fade-up">
+    <span class="section-tag">About me</span>
+    <h2 class="section-title">I build things that actually work in production</h2>
+    <p class="section-desc">Not just demos. Real applications with real users, real data, and real edge cases to solve.</p>
+  </div>
+  <div class="about-grid fade-up">
+    <div class="about-text">
+      <p>I'm Mani - a Python engineer based in England, UK. I spent two years at Integra Solutions building full-stack web and hybrid mobile applications using Angular, Ionic, FastAPI, Django, and MongoDB. I took full ownership of features from API design through to delivery, and mentored junior developers along the way.</p>
+      <p>After completing my MSc in Advanced Computer Science with a Distinction at Leicester, I went deep on production AI engineering. I've built a LangChain ReAct agent with multi-tool orchestration, a three-layer RAG pipeline over 141,000 rows of real-world messy data, and a GPT API adaptive prompting system used by real academic users.</p>
+      <p>I'm now looking for a sponsored software engineering role in the UK - ideally Python backend or full-stack, with room to work on AI-powered products. I hold a Post-Study Work visa valid until December 2026 and am open to Skilled Worker visa sponsorship.</p>
+    </div>
+    <div class="highlight-cards">
+      <div class="highlight-item">
+        <div class="highlight-emoji"></div>
+        <div class="highlight-title">MSc Advanced Computer Science - Distinction</div>
+        <div class="highlight-desc">University of Leicester, UK (2023&ndash;2025). Dissertation: AI-powered academic writing assistant with GPT API and Google Scholar integration.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-emoji"></div>
+        <div class="highlight-title">Production ReAct AI agent</div>
+        <div class="highlight-desc">Built a LangChain agent with ChromaDB retrieval and live web search tools over a 141,000-row Home Office dataset. Sub-2-second response with full reasoning trace.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-emoji"></div>
+        <div class="highlight-title">IEEE Hackathon - 3rd Place</div>
+        <div class="highlight-desc">Designed and implemented optimised Python solutions for two time-bound algorithmic challenges as part of a 2-member team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header fade-up">
+    <span class="section-tag">Tech stack</span>
+    <h2 class="section-title">What I work with</h2>
+    <p class="section-desc">Built and used in production - not just listed for keyword matching.</p>
+  </div>
+  <div class="skills-wrapper fade-up">
+    <div class="skill-card">
+      <div class="skill-name">Core technologies</div>
+      <div class="skill-badge-list">
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">FastAPI</span>
+        <span class="skill-badge">Django</span>
+        <span class="skill-badge">Angular 17</span>
+        <span class="skill-badge">TypeScript</span>
+        <span class="skill-badge">PostgreSQL</span>
+        <span class="skill-badge">MongoDB</span>
+        <span class="skill-badge">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">AI engineering</div>
+      <div class="skill-badge-list">
+        <span class="skill-badge">LangChain</span>
+        <span class="skill-badge">ReAct AI agents</span>
+        <span class="skill-badge">RAG pipelines</span>
+        <span class="skill-badge">ChromaDB</span>
+        <span class="skill-badge">sentence-transformers</span>
+        <span class="skill-badge">GPT API</span>
+        <span class="skill-badge">Groq API (Llama 3.1)</span>
+        <span class="skill-badge">Prompt engineering</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Frontend</div>
+      <div class="skill-badge-list">
+        <span class="skill-badge">Angular Signals</span>
+        <span class="skill-badge">NgRx</span>
+        <span class="skill-badge">RxJS</span>
+        <span class="skill-badge">React</span>
+        <span class="skill-badge">Ionic Framework</span>
+        <span class="skill-badge">Capacitor</span>
+        <span class="skill-badge">Responsive design</span>
+        <span class="skill-badge">WCAG</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Cloud and tools</div>
+      <div class="skill-badge-list">
+        <span class="skill-badge">AWS</span>
+        <span class="skill-badge">Docker</span>
+        <span class="skill-badge">Jenkins CI/CD</span>
+        <span class="skill-badge">Linux</span>
+        <span class="skill-badge">Git</span>
+        <span class="skill-badge">Azure AD</span>
+        <span class="skill-badge">Figma</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Methods</div>
+      <div class="skill-badge-list">
+        <span class="skill-badge">Agile / Scrum</span>
+        <span class="skill-badge">Code reviews</span>
+        <span class="skill-badge">Technical documentation</span>
+        <span class="skill-badge">Stakeholder management</span>
+        <span class="skill-badge">Mentoring</span>
+        <span class="skill-badge">Jest</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">AI dev tooling</div>
+      <div class="skill-badge-list">
+        <span class="skill-badge">Claude Code</span>
+        <span class="skill-badge">Cursor</span>
+        <span class="skill-badge">GitHub Copilot</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header fade-up">
+    <span class="section-tag">Experience</span>
+    <h2 class="section-title">Where I've worked</h2>
+  </div>
+  <div class="exp-list fade-up">
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Software Engineer</span>
+          &nbsp;-&nbsp;
+          <span class="exp-company">Integra Solutions</span>
+        </div>
+        <div class="exp-date">Aug 2021 &ndash; Jul 2023</div>
+      </div>
+      <ul class="exp-bullet">
+        <li>Delivered full-stack web and hybrid mobile applications using Angular, Ionic, Python FastAPI, Django, and MongoDB across multiple production codebases.</li>
+        <li>Engineered RESTful APIs handling data exchange between frontend, backend, and third-party services - including Apple HealthKit integration and Azure AD authentication.</li>
+        <li>Diagnosed and resolved a production API latency issue through direct Linux server investigation - identified inefficient PostgreSQL queries and resolved through query optimisation and caching.</li>
+        <li>Led code reviews and mentored two junior developers in Angular and Python best practices, reducing regression defects per sprint.</li>
+        <li>Collaborated with product owners, UI/UX designers, and QA engineers in agile sprints across healthcare, academic, and enterprise finance domains.</li>
+        <li>Applied lazy loading, NgRx state management, and RxJS reactive pipelines to improve Angular frontend performance across web and mobile platforms.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header fade-up">
+    <span class="section-tag">Projects</span>
+    <h2 class="section-title">Things I've built</h2>
+    <p class="section-desc">Production applications across AI engineering, health tech, and enterprise fintech.</p>
+  </div>
+  <div class="projects-grid fade-up">
+    <div class="project-card">
+      <div class="project-cat">AI Engineering - Full Stack</div>
+      <div class="project-title">UK Visa Sponsor Checker</div>
+      <div class="project-desc">Production RAG platform and ReAct AI agent over the 141,000-row UK Home Office sponsor register. Three-layer retrieval pipeline combining query normalisation, ChromaDB semantic search, and RapidFuzz fuzzy matching. FastAPI backend with /ask and /agent/query endpoints. Angular 17 frontend with Angular Signals. Reduced lookup from 12 minutes to under 3 seconds.</div>
+      <div class="project-techs">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">LangChain</span>
+        <span class="tech-tag">ReAct agent</span>
+        <span class="tech-tag">ChromaDB</span>
+        <span class="tech-tag">Angular 17</span>
+        <span class="tech-tag">Groq API</span>
+        <span class="tech-tag">RapidFuzz</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-cat">AI Engineering - Full Stack</div>
+      <div class="project-title">Dissertation Writing Assistant</div>
+      <div class="project-desc">AI-powered academic writing platform built for my MSc dissertation. GPT API adaptive prompting engine with context-aware templates per dissertation section. Google Scholar API integration for live research retrieval. Rich-text editor, Gantt-chart tracker, and role-based access for students and supervisors. Output validation guardrails on all AI responses.</div>
+      <div class="project-techs">
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">GPT API</span>
+        <span class="tech-tag">Prompt engineering</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Google Scholar API</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-cat">Health Tech - Frontend</div>
+      <div class="project-title">WellCourse - Remote Patient Monitoring</div>
+      <div class="project-desc">Production clinical platform where I was the sole frontend engineer. Longitudinal health dashboards across daily, weekly, monthly, and yearly views. Real-time Apple HealthKit data sync. Azure AD authentication for clinical teams. Delivered across web, iOS, and Android via Ionic and Capacitor.</div>
+      <div class="project-techs">
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">NgRx</span>
+        <span class="tech-tag">Ionic</span>
+        <span class="tech-tag">Azure AD</span>
+        <span class="tech-tag">Apple HealthKit</span>
+        <span class="tech-tag">TypeScript</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-cat">Fintech - Full Stack</div>
+      <div class="project-title">SunriseBilling - Enterprise Financial Platform</div>
+      <div class="project-desc">High-volume loan-level financial data platform. Django and PostgreSQL backend modules with automated Trial Balance generation, dynamic pricing logic, and REST API integration with accounting and general ledger systems. Optimised PostgreSQL schemas and query performance for transactional workloads.</div>
+      <div class="project-techs">
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">Django</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">REST APIs</span>
+        <span class="tech-tag">RBAC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header fade-up">
+    <span class="section-tag">Education and certifications</span>
+    <h2 class="section-title">Academic background</h2>
+  </div>
+  <div class="edu-grid fade-up">
+    <div class="edu-item">
+      <div class="edu-degree">MSc Advanced Computer Science</div>
+      <div class="edu-school">University of Leicester, UK</div>
+      <div class="edu-year">Sep 2023 &ndash; Jan 2025</div>
+      <div class="edu-badge">Distinction</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-degree">Bachelor of Technology - Computer Science</div>
+      <div class="edu-school">Sasi Institute of Technology and Engineering</div>
+      <div class="edu-year">Sep 2017 &ndash; Sep 2021</div>
+    </div>
+  </div>
+  <div class="cert-list fade-up">
+    <span class="cert-chip">ChatGPT and Generative AI - Udemy</span>
+    <span class="cert-chip">Angular - The Complete Guide - Udemy</span>
+    <span class="cert-chip">React - The Complete Guide - Udemy</span>
+    <span class="cert-chip">Data Structures and Algorithms - Udemy</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-header fade-up">
+    <span class="section-tag">Contact</span>
+    <h2 class="section-title">Open to new opportunities</h2>
+    <p class="section-desc">Actively looking for Python backend or full-stack roles in the UK with Skilled Worker visa sponsorship. If there's a fit, I'd be glad to hear from you.</p>
+  </div>
+  <div class="contact-buttons fade-up">
+    <a href="mailto:manikantakallakuri143@gmail.com" class="contact-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      manikantakallakuri143@gmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/manikanta-kallakuri-6128aa1b1/" target="_blank" class="contact-link">
+      <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18" stroke="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/manikantakallakuri8-bit" target="_blank" class="contact-link">
+      <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18" stroke="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      GitHub
+    </a>
+    <a href="tel:+447909274126" class="contact-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 12.09a19.79 19.79 0 01-3-8.63A2 2 0 012 1.5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      +44 7909 274126
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Manikanta Kallakuri - Python Engineer &amp; AI Builder - England, UK</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function toggleNav(btn) {
+    btn.classList.toggle('open');
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function closeNav() {
+    document.querySelector('.nav-hamburger').classList.remove('open');
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+  document.addEventListener('click', (e) => {
+    const drawer = document.getElementById('mobileNav');
+    const btn = document.querySelector('.nav-hamburger');
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+      closeNav();
+    }
+  });
+</script>
+</body>
+</html>
